@@ -8,43 +8,17 @@
 
   <body>
     <div class="sidebar">
-      <button class="dropdownMenu">Drop Here!</button>
-      <ul class="dropBar">
-        <li>
-          <button class="sideBtn" id="drop1">Next Pic</button>
-        </li>
-        <li>
-          <button class="sideBtn" id="drop2">Previous Pic</button>
-        </li>
-      </ul>
+      <form id="form" action="./index.js" method="post">
+        <input type="text" name="search" id="search" />
+        <button type="submit" class="searchBtn">Check Weather</button>
+      </form>
     </div>
     <div class="mainContainer">
-      <div class="container">
-        <div class="pic visible" id="p1">
-          <img src="./media/bagel.jpeg" alt="Bagel" />
-        </div>
-        <div class="pic" id="p2">
-          <img src="./media/bird.jpeg" alt="Bird" />
-        </div>
-        <div class="pic" id="p3">
-          <img src="./media/cat.jpeg" alt="Cat" />
-        </div>
-        <div class="pic" id="p4">
-          <img src="./media/loadingcat.jpeg" alt="Loading Cat" />
-        </div>
-        <div class="pic" id="p5">
-          <img src="./media/rabbit.jpeg" alt="Rabbits" />
-        </div>
-      </div>
-      <div class="navContainer">
-        <button class="nav visible" id="p1nav"></button>
-        <button class="nav" id="p2nav"></button>
-        <button class="nav" id="p3nav"></button>
-        <button class="nav" id="p4nav"></button>
-        <button class="nav" id="p5nav"></button>
-      </div>
+      <div id="city"></div>
+      <div id="weather"></div>
+      <img src="#" alt="weather" />
     </div>
 
-    <footer>Todo or not todo, that is the question...</footer>
+    <footer>I wonder what's the weather like there...</footer>
   </body>
 </html>

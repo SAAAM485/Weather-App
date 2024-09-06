@@ -1,20 +1,14 @@
 import "./style.css";
-import { toggleDropdown } from "./dropdown";
-import { navListener, nextPreviousPic } from "./carousel";
+import fetchWeather from "./fetchWeather";
 
-function dropdownHover() {
-  const dropdownMenu = document.querySelector(".dropdownMenu");
-  dropdownMenu.parentNode.addEventListener(
-    "mouseover",
-    () => toggleDropdown(dropdownMenu),
-    false,
-  );
-  dropdownMenu.parentNode.addEventListener(
-    "mouseout",
-    () => toggleDropdown(dropdownMenu),
-    false,
-  );
+function checkWeather() {
+  const searchBtn = document.querySelector(".searchBtn");
+  searchBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const location = document.querySelector("#search").value;
+    fetchWeather(location);
+  });
 }
-dropdownHover();
-navListener();
-nextPreviousPic();
+fetchWeather();
+checkWeather();
